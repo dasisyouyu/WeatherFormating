@@ -3,6 +3,9 @@ BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 class Weather
   # 引数にAPIkeyとcity_idを渡すと整形して返す
   # APIの仕様で３時間ごと１週間分とれるのでその日の適当な時間の天気を取ってくる
+  # @param[string]key openweathermapのAPIキー
+  # @param[string]city_name 都市名、大体の都市は網羅してると思います。
+  # @return[string]result 整形した文字列を返します
   def self.formating(key, city_name)
     require "json"
     require "open-uri"
